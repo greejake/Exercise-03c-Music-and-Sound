@@ -48,8 +48,10 @@ func _physics_process(_delta):
 		pass
 
 func hit(_ball):
+	Global.color_rotate = Global.color_rotate_amount
+	Global.color_position = _ball.global_position
 	die()
-
+	
 func die():
 	dying = true
 	collision_layer = 0
